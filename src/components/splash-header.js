@@ -3,32 +3,33 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
+import { backgroundColor } from "../colors";
 
-const termsSpacing = `20px`;
+const termsSpacing = `20px`
 const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+  h1 {
+    font-size: 10rem;
+  }
+
+  ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+    padding: 0px ${termsSpacing};
+    margin-top: -2rem;
 
-    h1 {
-        font-size: 10rem;
+    li {
+      list-style-type: none;
+      margin: 0px ${termsSpacing};
     }
+  }
 
-    ul {
-        display: flex;
-        padding: 0px ${termsSpacing};
-        margin-top: -2rem;
-
-        li {
-            list-style-type: none;
-            margin: 0px ${termsSpacing};
-        }
-    }
-
-    p {
-        font-size: 1.25rem;
-    }
+  p {
+    font-size: 1.25rem;
+  }
 `;
 
 const SplashHeader = () => {
@@ -42,17 +43,23 @@ const SplashHeader = () => {
         }
       }
     }
-  `)
+  `);
+
+  const fluidImageStack = [
+    data.splashImage.childImageSharp.fluid,
+    `linear-gradient(rgba(0,0,0,0) 80%, ${backgroundColor} 100%)`
+  ].reverse();
 
   return (
     <BackgroundImage
-      fluid={data.splashImage.childImageSharp.fluid}
+      preserveStackingContext={true}
+      fluid={fluidImageStack}
       style={{
-        width: `100vw`,
+        width: `100%`,
         height: `100vh`,
         display: `flex`,
         alignItems: `center`,
-        justifyContent: `center`
+        justifyContent: `center`,
       }}
     >
       <StyledHeader>

@@ -1,0 +1,9 @@
+- name: Angular Modal Outlet
+  description: An Angular library for managing modals dialogs.
+  project-url: https://blake-mealey.github.io/ng-modal-outlet
+  github-url: https://github.com/blake-mealey/ng-modal-outlet
+
+- name: Chimerical Conversions
+  description: A web app for converting things
+  project-url: https://conversions.chimerical.ca
+  github-url: https://github.com/blake-mealey/conversions-app
