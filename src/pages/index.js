@@ -2,7 +2,7 @@ import React from "react"
 import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
-import { backgroundColor } from "../colors";
+import { backgroundColor, textColor } from "../colors";
 import ProjectsView from "../components/projects-view";
 
 const Main = styled.main`
@@ -11,11 +11,15 @@ const Main = styled.main`
 
   padding-top: 2em;
 
-  color: white;
+  color: ${textColor};
   background-color: ${backgroundColor};
 
-  & > * {
-    max-width: 1000px;
+  & > article {
+    width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

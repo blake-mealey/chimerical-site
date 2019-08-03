@@ -1,9 +1,19 @@
+- name: Azure Commit Copy
+  description: A Chrome extension for quickly copying and formatting commit and build info from Azure DevOps
+  projectUrl: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
+  gitHubUrl: 'https://github.com/blake-mealey/azure-commit-copy'
+
 - name: Angular Modal Outlet
-  description: An Angular library for managing modals dialogs.
-  project-url: https://blake-mealey.github.io/ng-modal-outlet
-  github-url: https://github.com/blake-mealey/ng-modal-outlet
+  description: An Angular library for managing modal dialogs
+  projectUrl: 'https://blake-mealey.github.io/ng-modal-outlet'
+  gitHubUrl: 'https://github.com/blake-mealey/ng-modal-outlet'
 
 - name: Chimerical Conversions
   description: A web app for converting things
-  project-url: https://conversions.chimerical.ca
-  github-url: https://github.com/blake-mealey/conversions-app
+  projectUrl: 'https://conversions.chimerical.ca'
+  gitHubUrl: 'https://github.com/blake-mealey/conversions-app'
+
+- name: University Schedule Converter
+  description: A web app for creating Google calendars out of a University of Calgary course schedule
+  projectUrl: 'https://schedule.chimerical.ca'
+  gitHubUrl: 'https://github.com/blake-mealey/UofC-Schedule-to-Google-Calendar'

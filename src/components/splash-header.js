@@ -3,14 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
-import { backgroundColor } from "../colors";
+import { backgroundColor, textColor } from "../colors";
 
 const termsSpacing = `20px`
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: ${textColor};
 
   h1 {
     font-size: 10rem;
