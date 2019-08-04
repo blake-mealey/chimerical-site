@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
@@ -20,6 +20,11 @@ const Main = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    & > h1 {
+      font-size: 3.5em;
+      margin-bottom: 1.5em;
+    }
   }
 `;
 
@@ -45,6 +50,6 @@ const IndexPage = () => (
       </article>
     </Main>
   </>
-)
+);
 
 export default IndexPage

@@ -17,3 +17,12 @@
   description: A web app for creating Google calendars out of a University of Calgary course schedule
   projectUrl: 'https://schedule.chimerical.ca'
   gitHubUrl: 'https://github.com/blake-mealey/UofC-Schedule-to-Google-Calendar'
+
+- name: Notes on Demand (NOD)
+  description: A web app for making notes out of lectures by transcribing from audio then summarizing. Built as part of a group project at University of Calgary
+  projectUrl: 'https://nod.chimerical.ca'
+  gitHubUrl: 'https://github.com/blake-mealey/nod-site'
+
+- name: Car Wars
+  description: A splitscreen multiplayer vehiculer battle game. Built as part of a group project for CPSC XXX at University of Calgary. Made from scratch in C++ and OpenGL with Nvidea PhysX.
+  gitHubUrl: 'https://github.com/blake-mealey/car-wars'

@@ -13,7 +13,7 @@ const ProjectsList = styled.ul`
 `;
 
 const Project = styled.li`
-  border-radius: 20px;
+  border-radius: 0 20px 0 20px;
   border: 4px solid;
   list-style-type: none;
   padding: 20px;
@@ -46,8 +46,30 @@ const ProjectsView = () => {
           projectUrl
         }
       }
+      githubUser: githubViewer {
+        repositories {
+          nodes {
+            updatedAt
+            name
+          }
+        }
+      }
     }
   `);
+
+  function getProjectLastUpdatedDate(project) {
+    const repo = data.githubUser.repositories.nodes.find(repo => project.gitHubUrl.endsWith(repo.name));
+    if (repo) {
+      const dateTime = repo.updatedAt;
+      const date = new Date(dateTime);
+      const formatted = date.toLocaleDateString(`en-US`, {
+        month: `long`,
+        year: `numeric`
+      });
+
+      return <time datetime={dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{formatted}</time>;
+    }
+  }
 
   return (
     <ProjectsList>
@@ -57,6 +79,7 @@ const ProjectsView = () => {
             <header>
               <h1>{project.name}</h1>
             </header>
+            {getProjectLastUpdatedDate(project)}
             <p>{project.description}</p>
             <ButtonsList>
               <AnchorButton href={project.projectUrl}>-></AnchorButton>
@@ -69,4 +92,4 @@ const ProjectsView = () => {
   );
 }
 
-export default ProjectsView
+export default ProjectsView;
