@@ -28,11 +28,30 @@ const Project = styled.li`
   }
 `;
 
-const ButtonsList = styled.div`
+const Tag = styled.span`
+  border-radius: 9999em;
+  padding: 0.3em;
+  background-color: ${accentColor};
+  font-size: 0.8em;
+  text-transform: lowercase;
+`;
+
+const ButtonsList = styled.nav`
   & > * {
     margin-right: 10px;
   }
 `;
+
+const linkTypes = [
+  {
+    field: `project`,
+    display: `->`
+  },
+  {
+    field: `gitHub`,
+    display: `GitHub`
+  }
+];
 
 const ProjectsView = () => {
   const data = useStaticQuery(graphql`
@@ -42,8 +61,11 @@ const ProjectsView = () => {
           id
           name
           description
-          gitHubUrl
-          projectUrl
+          links {
+            project
+            gitHub
+          }
+          tags
         }
       }
       githubUser: githubViewer {
@@ -57,37 +79,57 @@ const ProjectsView = () => {
     }
   `);
 
-  function getProjectLastUpdatedDate(project) {
-    const repo = data.githubUser.repositories.nodes.find(repo => project.gitHubUrl.endsWith(repo.name));
-    if (repo) {
-      const dateTime = repo.updatedAt;
-      const date = new Date(dateTime);
-      const formatted = date.toLocaleDateString(`en-US`, {
-        month: `long`,
-        year: `numeric`
-      });
+  class ProjectModel {
+    constructor({id, name, description, links, tags}) {
+      this.id = id;
+      this.name = name;
+      this.description = description;
+      this.links = links;
+      this.tags = tags;
 
-      return <time datetime={dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{formatted}</time>;
+      const repo = data.githubUser.repositories.nodes.find(repo => this.links.gitHub.endsWith(repo.name));
+      if (repo) {
+        this.lastUpdated = {};
+        this.lastUpdated.dateTime = repo.updatedAt;
+        this.lastUpdated.date = new Date(this.lastUpdated.dateTime);
+        this.lastUpdated.formatted = this.lastUpdated.date.toLocaleDateString(`en-US`, {
+          month: `long`,
+          year: `numeric`
+        });
+      }
     }
-  }
 
-  return (
-    <ProjectsList>
-      {data.projects.nodes.map((project) => (
-        <Project key={project.id}>
+    render() {
+      return (
+        <Project key={this.id}>
           <section>
             <header>
-              <h1>{project.name}</h1>
+              <h1>{this.name}</h1>
             </header>
-            {getProjectLastUpdatedDate(project)}
-            <p>{project.description}</p>
             <ButtonsList>
-              <AnchorButton href={project.projectUrl}>-></AnchorButton>
-              <AnchorButton href={project.gitHubUrl}>GitHub</AnchorButton>
+              {this.lastUpdated && <time dateTime={this.lastUpdated.dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{this.lastUpdated.formatted}</time>}
+              {this.tags.sort().map(tag => <Tag key={tag}>{tag}</Tag>)}
+            </ButtonsList>
+            <p>{this.description}</p>
+            <ButtonsList>
+              {linkTypes.map(linkType =>
+                this.links[linkType.field] && <AnchorButton key={linkType.field} href={this.links[linkType.field]}>
+                  {linkType.display}
+                </AnchorButton>)}
             </ButtonsList>
           </section>
         </Project>
-      ))}
+      );
+    }
+  }
+
+  const projects = data.projects.nodes.map(project => new ProjectModel(project)).sort((a, b) => {
+    return a.lastUpdated.date > b.lastUpdated.date ? -1 : a.lastUpdated.date < b.lastUpdated.date ? 1 : 0;
+  });
+
+  return (
+    <ProjectsList>
+      {projects.map(project => project.render())}
     </ProjectsList>
   );
 }

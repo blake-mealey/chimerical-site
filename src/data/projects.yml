@@ -1,28 +1,57 @@
 - name: Azure Commit Copy
   description: A Chrome extension for quickly copying and formatting commit and build info from Azure DevOps
-  projectUrl: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
-  gitHubUrl: 'https://github.com/blake-mealey/azure-commit-copy'
+  links:
+    project: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
+    gitHub: 'https://github.com/blake-mealey/azure-commit-copy'
+  tags: [ 'productivity', 'chrome extension' ]
 
 - name: Angular Modal Outlet
-  description: An Angular library for managing modal dialogs
-  projectUrl: 'https://blake-mealey.github.io/ng-modal-outlet'
-  gitHubUrl: 'https://github.com/blake-mealey/ng-modal-outlet'
+  description: >
+    An Angular library for managing modal dialogs
+  links:
+    project: 'https://blake-mealey.github.io/ng-modal-outlet'
+    gitHub: 'https://github.com/blake-mealey/ng-modal-outlet'
+  tags: [ 'web app' ]
 
 - name: Chimerical Conversions
-  description: A web app for converting things
-  projectUrl: 'https://conversions.chimerical.ca'
-  gitHubUrl: 'https://github.com/blake-mealey/conversions-app'
+  description: >
+    A web app for converting things
+  links:
+    project: 'https://conversions.chimerical.ca'
+    gitHub: 'https://github.com/blake-mealey/conversions-app'
+  tags: [ 'web app' ]
 
 - name: University Schedule Converter
-  description: A web app for creating Google calendars out of a University of Calgary course schedule
-  projectUrl: 'https://schedule.chimerical.ca'
-  gitHubUrl: 'https://github.com/blake-mealey/UofC-Schedule-to-Google-Calendar'
+  description: >
+    A web app for creating Google calendars out of a University of Calgary course schedule
+  links:
+    project: 'https://schedule.chimerical.ca'
+    gitHub: 'https://github.com/blake-mealey/UofC-Schedule-to-Google-Calendar'
+  tags: [ 'web app', 'productivity' ]
 
 - name: Notes on Demand (NOD)
-  description: A web app for making notes out of lectures by transcribing from audio then summarizing. Built as part of a group project at University of Calgary
-  projectUrl: 'https://nod.chimerical.ca'
-  gitHubUrl: 'https://github.com/blake-mealey/nod-site'
+  description: >
+    A web app for making notes out of lectures by transcribing from audio then summarizing.
+    Built over 5 days as part of a group project for CPSC 499.01 - Software Entrepreneurship
+    at University of Calgary
+  links:
+    project: 'https://nod.chimerical.ca'
+    gitHub: 'https://github.com/blake-mealey/nod-site'
+  tags: [ 'web app', 'school project', 'group project' ]
 
 - name: Car Wars
-  description: A splitscreen multiplayer vehiculer battle game. Built as part of a group project for CPSC XXX at University of Calgary. Made from scratch in C++ and OpenGL with Nvidea PhysX.
-  gitHubUrl: 'https://github.com/blake-mealey/car-wars'
+  description: >
+    A splitscreen multiplayer vehiculer battle game. Built as part of a group project for
+    CPSC 585 - Games Programming at University of Calgary. Made from scratch in C++ and
+    OpenGL with Nvidea PhysX
+  links:
+    gitHub: 'https://github.com/blake-mealey/car-wars'
+  tags: [ 'video game', 'c++', 'school project', 'group project' ]
+
+- name: YouTube to Spotify
+  description: >
+    A Chrome extension to quickly find the song from a YouTube music video in Spotify and
+    add it to a playlist
+  links:
+    gitHub: 'https://github.com/blake-mealey/YouTube-To-Spotify'
+  tags: [ 'productivity', 'chrome extension' ]

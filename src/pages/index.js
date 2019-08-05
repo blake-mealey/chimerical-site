@@ -1,8 +1,8 @@
-import React, { Fragment } from "react"
+import React from "react"
 import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
-import { backgroundColor, textColor } from "../colors";
+import { backgroundColor, textColor, accentColor } from "../colors";
 import ProjectsView from "../components/projects-view";
 
 const Main = styled.main`
@@ -24,6 +24,8 @@ const Main = styled.main`
     & > h1 {
       font-size: 3.5em;
       margin-bottom: 1.5em;
+      text-decoration: underline;
+      text-decoration-color: ${accentColor}
     }
   }
 `;
