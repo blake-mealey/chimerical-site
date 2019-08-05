@@ -15,6 +15,7 @@ stages:
   - deployment: DeploySite
     pool:
       vmImage: 'ubuntu-latest'
+    environment: CI
     strategy:
       runOnce:
         deploy:
