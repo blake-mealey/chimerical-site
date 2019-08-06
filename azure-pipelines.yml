@@ -8,6 +8,8 @@ stages:
         pool:
           vmImage: ubuntu-latest
         steps:
+          - script: npm install
+            displayName: Install packages
           - script: npm run build
             displayName: Run Gatsby build
           - task: CopyFiles@2
