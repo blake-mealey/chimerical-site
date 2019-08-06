@@ -8,7 +8,7 @@ stages:
         pool:
           vmImage: ubuntu-latest
         steps:
-          - script: npm build
+          - script: npm run build
             displayName: Run Gatsby build
           - task: CopyFiles@2
             displayName: Copy build to staging directory
