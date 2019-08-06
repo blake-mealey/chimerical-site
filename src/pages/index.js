@@ -4,6 +4,7 @@ import SplashHeader from "../components/splash-header"
 import styled from "styled-components"
 import { backgroundColor, textColor, accentColor } from "../colors";
 import ProjectsView from "../components/projects-view";
+import "../components/layout.css";
 
 const Main = styled.main`
   display: flex;
