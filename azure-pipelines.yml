@@ -2,22 +2,45 @@ trigger:
 - master
 
 stages:
-- stage: Build
-  jobs:
-  - job: Build
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-    - script: npm build
-      displayName: Gatsby build
-- stage: Deploy
-  jobs:
-  - deployment: DeploySite
-    pool:
-      vmImage: 'ubuntu-latest'
-    environment: CI
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-            - script: "echo \"todo: deploy\""
+  - stage: Build
+    jobs:
+      - job: Build
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - script: npm build
+            displayName: Run Gatsby build
+          - task: CopyFiles@2
+            displayName: Copy build to staging directory
+            inputs:
+              Contents: |
+                public/**
+              TargetFolder: $(Build.ArtifactStagingDirectory)
+              CleanTargetFolder: true
+          - task: PublishBuildArtifacts@1
+            displayName: Publish build artifact
+            inputs:
+              ArtifactName: chimerical-site
+  - stage: Deploy
+    jobs:
+      - deployment: DeploySite
+        pool:
+          vmImage: ubuntu-latest
+        environment: CI
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: SSH@0
+                  displayName: Delete old site
+                  inputs:
+                    sshEndpoint: Chimerical
+                    runOptions: commands
+                    commands: rm -rf $(CI)/chimerical-site
+                - task: CopyFilesOverSSH@0
+                  displayName: Deploy new site
+                  inputs:
+                    sshEndpoint: Chimerical
+                    sourceFolder: $(System.DefaultWorkingDirectory)/chimerical-site
+                    contents: '**'
+                    targetFolder: $(CI)
