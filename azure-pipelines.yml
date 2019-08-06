@@ -10,6 +10,8 @@ stages:
         steps:
           - script: npm install
             displayName: Install packages
+          - script: echo 'GITHUB_API_TOKEN="$(GitHub-API-Token)"' >> .env.production
+            displayName: Create environment file
           - script: npm run build
             displayName: Run Gatsby build
           - task: CopyFiles@2
