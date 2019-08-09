@@ -3,7 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
-import { backgroundColor, textColor } from "../colors";
+import { backgroundColor, textColor, accentColor } from "../colors";
+import MaterialIcon from "./material-icon";
 
 const termsSpacing = `20px`
 const StyledHeader = styled.header`
@@ -32,6 +33,22 @@ const StyledHeader = styled.header`
   }
 `;
 
+const StyledBackgroundImage = styled(BackgroundImage)`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .down-arrow {
+    color: ${accentColor};
+    font-size: 2em;
+    position: absolute;
+    bottom: 1em;
+  }
+`;
+
 const SplashHeader = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -51,16 +68,9 @@ const SplashHeader = () => {
   ].reverse();
 
   return (
-    <BackgroundImage
+    <StyledBackgroundImage
       preserveStackingContext={true}
       fluid={fluidImageStack}
-      style={{
-        width: `100%`,
-        height: `100vh`,
-        display: `flex`,
-        alignItems: `center`,
-        justifyContent: `center`,
-      }}
     >
       <StyledHeader>
         <h1>Chimerical</h1>
@@ -71,7 +81,8 @@ const SplashHeader = () => {
         </ul>
         <p>existing only as the product of unchecked imagination</p>
       </StyledHeader>
-    </BackgroundImage>
+      <MaterialIcon className='down-arrow'>keyboard_arrow_down</MaterialIcon>
+    </StyledBackgroundImage>
   )
 }
 
