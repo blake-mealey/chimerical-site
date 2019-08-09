@@ -21,6 +21,6 @@ class Color {
     }
 }
 
-export const backgroundColor = new Color('#1E292C');
-export const textColor = new Color('#FFFFFF');
-export const accentColor = new Color('#FD512B');
+export const backgroundColor = new Color(`#1E292C`);
+export const textColor = new Color(`#FFFFFF`);
+export const accentColor = new Color(`#FD512B`);

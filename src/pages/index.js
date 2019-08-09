@@ -3,7 +3,7 @@ import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
 import { backgroundColor, textColor } from "../colors";
-import ProjectsView from "../components/projects-view";
+import ProjectsView from "../components/projects/projects-view";
 import SEO from "../components/seo";
 import "../components/layout.css";
 import Section from "../components/section";
