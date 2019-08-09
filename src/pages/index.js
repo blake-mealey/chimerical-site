@@ -32,6 +32,8 @@ const Main = styled.main`
 
 const IndexPage = () => (
   <>
+    <SEO title="Chimerical"/>
+
     <SplashHeader/>
 
     <Main>
