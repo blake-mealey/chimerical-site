@@ -116,7 +116,7 @@ const ProjectsView = () => {
               <h3>{this.name}</h3>
             </header>
             <SpacedList>
-              {this.lastUpdated && <time dateTime={this.lastUpdated.dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{this.lastUpdated.formatted}</time>}
+              {this.lastUpdated && <time title="Last updated" dateTime={this.lastUpdated.dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{this.lastUpdated.formatted}</time>}
               {this.tags.sort().map(tag => <Tag key={tag}>{tag}</Tag>)}
             </SpacedList>
             <p>{this.description}</p>
