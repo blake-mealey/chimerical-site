@@ -13,10 +13,6 @@ const StyledHeader = styled.header`
   align-items: center;
   color: ${textColor};
 
-  h1 {
-    font-size: 10rem;
-  }
-
   ul {
     display: flex;
     padding: 0px ${termsSpacing};

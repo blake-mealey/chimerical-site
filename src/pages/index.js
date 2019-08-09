@@ -22,8 +22,7 @@ const Main = styled.main`
     flex-direction: column;
     align-items: center;
 
-    & > h1 {
-      font-size: 3.5em;
+    & > h2 {
       margin-bottom: 1.5em;
       text-decoration: underline;
       text-decoration-color: ${accentColor}
@@ -37,9 +36,9 @@ const IndexPage = () => (
 
     <Main>
       <article>
-        <h1>
+        <h2>
           Projects by Blake Mealey
-        </h1>
+        </h2>
         <ProjectsView></ProjectsView>
         <br/>
         <br/>

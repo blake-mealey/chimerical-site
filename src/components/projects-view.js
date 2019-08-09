@@ -113,7 +113,7 @@ const ProjectsView = () => {
         <Project key={this.id}>
           <section>
             <header>
-              <h1>{this.name}</h1>
+              <h3>{this.name}</h3>
             </header>
             <ButtonsList>
               {this.lastUpdated && <time dateTime={this.lastUpdated.dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{this.lastUpdated.formatted}</time>}
