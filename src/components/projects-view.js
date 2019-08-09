@@ -37,7 +37,7 @@ const Tag = styled.span`
   text-transform: lowercase;
 `;
 
-const ButtonsList = styled.nav`
+const SpacedList = styled.div`
   & > * {
     margin-right: 10px;
   }
@@ -115,17 +115,17 @@ const ProjectsView = () => {
             <header>
               <h3>{this.name}</h3>
             </header>
-            <ButtonsList>
+            <SpacedList>
               {this.lastUpdated && <time dateTime={this.lastUpdated.dateTime} style={{fontSize: `0.8em`, opacity: 0.8}}>{this.lastUpdated.formatted}</time>}
               {this.tags.sort().map(tag => <Tag key={tag}>{tag}</Tag>)}
-            </ButtonsList>
+            </SpacedList>
             <p>{this.description}</p>
-            <ButtonsList>
+            <SpacedList as="nav">
               {linkTypes.map(linkType =>
                 this.links[linkType.field] && <AnchorButton key={linkType.field} href={this.links[linkType.field]}>
                   {linkType.display}
                 </AnchorButton>)}
-            </ButtonsList>
+            </SpacedList>
           </section>
         </Project>
       );
