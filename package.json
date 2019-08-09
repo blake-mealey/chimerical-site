@@ -1,7 +1,7 @@
 {
   "name": "chimerical-site",
   "private": false,
-  "description": "A project portfolio and resume website",
+  "description": "A project portfolio and online resume",
   "version": "0.2.0",
   "author": "Blake Mealey <blakemealey@gmail.com>",
   "dependencies": {
