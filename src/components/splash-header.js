@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
@@ -42,10 +42,16 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   justify-content: center;
 
   .down-arrow {
-    color: ${accentColor};
+    color: ${textColor};
     font-size: 2em;
     position: absolute;
     bottom: 1em;
+
+    transition: 0.2s;
+
+    &:hover {
+      color: ${accentColor};
+    }
   }
 `;
 
@@ -81,7 +87,7 @@ const SplashHeader = () => {
         </ul>
         <p>existing only as the product of unchecked imagination</p>
       </StyledHeader>
-      <MaterialIcon className='down-arrow'>keyboard_arrow_down</MaterialIcon>
+      <Link to="#"><MaterialIcon className='down-arrow'>keyboard_arrow_down</MaterialIcon></Link>
     </StyledBackgroundImage>
   )
 }
