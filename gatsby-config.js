@@ -41,6 +41,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Material+Icons`
+        ],
+        display: `swap`
+      }
+    },
+    {
       resolve: `gatsby-source-github`,
       options: {
         headers: {

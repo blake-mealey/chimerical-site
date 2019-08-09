@@ -4,6 +4,7 @@ import AnchorButton from "../components/styled/anchor-button";
 import { accentColor } from "../colors";
 
 import styled from "styled-components";
+import MaterialIcon from "./material-icon";
 
 const ProjectsList = styled.ul`
   display: flex;
@@ -45,7 +46,7 @@ const ButtonsList = styled.nav`
 const linkTypes = [
   {
     field: `project`,
-    display: `->`
+    display: <MaterialIcon>arrow_forward</MaterialIcon>
   },
   {
     field: `gitHub`,
