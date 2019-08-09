@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectModel from "./project-model";
 import ProjectCard from "./project-card";
-import CardList from "../basics/card-list";
+import CardList from "../primitives/card-list";
 
 const ProjectsView = () => {
   const data = useStaticQuery(graphql`

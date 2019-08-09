@@ -1,5 +1,5 @@
 import React from "react";
-import MaterialIcon from "../basics/material-icon";
+import MaterialIcon from "../primitives/material-icon";
 
 const linkTypes = [
   {

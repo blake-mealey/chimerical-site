@@ -1,8 +1,8 @@
 import React from "react";
-import SpacedList from "../basics/spaced-list";
-import AnchorButton from "../basics/anchor-button";
-import Tag from "../basics/tag";
-import Card from "../basics/card";
+import SpacedList from "../primitives/spaced-list";
+import AnchorButton from "../primitives/anchor-button";
+import Tag from "../primitives/tag";
+import Card from "../primitives/card";
 
 const ProjectCard = ({ project }) => (
   <Card key={project.id}>
