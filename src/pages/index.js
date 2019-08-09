@@ -8,7 +8,7 @@ import SEO from "../components/seo";
 import "../components/layout.css";
 import Section from "../components/section";
 
-const Main = styled.main`
+const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ const IndexPage = () => (
 
     <SplashHeader/>
 
-    <Main>
+    <StyledMain>
       <Section title="Projects by Blake Mealey">
         <ProjectsView/>
       </Section>
@@ -45,7 +45,7 @@ const IndexPage = () => (
       <Section title="Achievements">
         <p>Coming soon</p>
       </Section>
-    </Main>
+    </StyledMain>
   </>
 );
 
