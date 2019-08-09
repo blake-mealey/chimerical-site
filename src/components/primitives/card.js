@@ -12,6 +12,10 @@ const StyledSection = styled.section`
   list-style-type: none;
   padding: 20px;
   margin: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   transition: 0.2s;
 
@@ -52,24 +56,28 @@ const Card = ({ id, title, tags, dates, links, children }) => {
   }
 
   return (
-    <StyledSection key={id}>
-      {title &&
-        <header>
-          <h3>{title}</h3>
-        </header>}
+    <StyledSection key={id} as="section">
+      <div>
+        {title &&
+          <header>
+            <h3>{title}</h3>
+          </header>}
 
-      <SpacedList>
-        {dates && dates.map(date => <time title={date.title} dateTime={date.dateTime}> {date.formatted} </time>)
-                       .reduce((acc, item, i) => i === 0 ? [item] : [...acc, <span>-</span>, item], [])}
-        {tags && tags.sort().map(tag => <Tag tag={tag}/>)}
-      </SpacedList>
+        <SpacedList>
+          {dates && dates.map(date => <time title={date.title} dateTime={date.dateTime}> {date.formatted} </time>)
+                        .reduce((acc, item, i) => i === 0 ? [item] : [...acc, <span>-</span>, item], [])}
+          {tags && tags.sort().map(tag => <Tag tag={tag}/>)}
+        </SpacedList>
 
-      {children}
+        {children}
+      </div>
 
-      {links &&
-        <SpacedList as="nav">
-          {links.map(link => link && <AnchorButton key={link.key} href={link.url}>{link.display}</AnchorButton>)} 
-        </SpacedList>}
+      <footer>
+        {links &&
+          <SpacedList as="nav">
+            {links.map(link => link && <AnchorButton key={link.key} href={link.url}>{link.display}</AnchorButton>)} 
+          </SpacedList>}
+      </footer>
     </StyledSection>
   );
 };

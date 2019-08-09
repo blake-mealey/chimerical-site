@@ -1,0 +1,22 @@
+- name: Software Developer, Nureva, Inc.
+  startDate: 2018-04
+  description: |
+    * Full stack web developer working in SQL, .NET, Angular.js, and Angular
+
+- name: Technical-Engineering Intern, Synopsys, Inc.
+  startDate: 2017-05
+  endDate: 2017-08
+  description: |
+    * Worked in Java with a Selenium-based automation framework to automate existing manual test cases.
+    * Worked on CSV automation (validating generated CSV files against constructed models).
+    * Worked on improving PDF automation.
+    * Participated in daily standup emails and weekly team meetings.
+
+- name: Technical-Engineering Intern, Synopsys, Inc.
+  startDate: 2016-05
+  endDate: 2016-08
+  description: |
+    * Worked in Java to build frameworks for GUI automation backends, using tools like SikuliX and Tesseract.
+    * Worked on PDF automation (parsing text from and using SikuliX visual tools on PDFs).
+    * Improved existing OCR functionality for desktop automation (mainly through image pre-processing with BoofCV).
+    * Participated in daily standup emails and weekly team meetings, sharing project progress/challenges for the past day/week, and discussing intentions for the coming day/week.

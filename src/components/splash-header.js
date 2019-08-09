@@ -48,6 +48,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
 
     &:hover {
       color: ${accentColor};
+      transform: scale(1.5)
     }
   }
 `;

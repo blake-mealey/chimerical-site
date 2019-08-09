@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import ProjectModel from "./project-model";
 import CardList from "../primitives/card-list";
 import Card from "../primitives/card";
-import DateModel from "../../date-model";
 
 const ProjectsView = () => {
   const data = useStaticQuery(graphql`
