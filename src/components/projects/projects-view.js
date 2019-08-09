@@ -1,8 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectModel from "./project-model";
-import ProjectCard from "./project-card";
 import CardList from "../primitives/card-list";
+import Card from "../primitives/card";
+import DateModel from "../../date-model";
 
 const ProjectsView = () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +14,7 @@ const ProjectsView = () => {
           name
           description
           links {
-            project
+            primary
             gitHub
           }
           tags
@@ -45,7 +46,14 @@ const ProjectsView = () => {
 
   return (
     <CardList>
-      {projects.map(project => <ProjectCard project={project}/>)}
+      {projects.map(project =>
+        <Card id={project.id}
+              title={project.name}
+              tags={project.tags}
+              dates={[project.lastUpdated]}
+              links={project.links}>
+          <p>{project.description}</p>
+        </Card>)}
     </CardList>
   );
 }

@@ -2,7 +2,7 @@
   description: >
     A Chrome extension for quickly copying and formatting commit and build info from Azure DevOps
   links:
-    project: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
+    primary: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
     gitHub: 'https://github.com/blake-mealey/azure-commit-copy'
   tags: [ 'productivity', 'chrome extension' ]
 
@@ -10,7 +10,7 @@
   description: >
     An Angular library for managing modal dialogs
   links:
-    project: 'https://blake-mealey.github.io/ng-modal-outlet'
+    primary: 'https://blake-mealey.github.io/ng-modal-outlet'
     gitHub: 'https://github.com/blake-mealey/ng-modal-outlet'
   tags: [ 'web app' ]
 
@@ -18,7 +18,7 @@
   description: >
     A web app for converting things
   links:
-    project: 'https://conversions.chimerical.ca'
+    primary: 'https://conversions.chimerical.ca'
     gitHub: 'https://github.com/blake-mealey/conversions-app'
   tags: [ 'web app' ]
 
@@ -26,7 +26,7 @@
   description: >
     A web app for creating Google calendars out of a University of Calgary course schedule
   links:
-    project: 'https://schedule.chimerical.ca'
+    primary: 'https://schedule.chimerical.ca'
     gitHub: 'https://github.com/blake-mealey/UofC-Schedule-to-Google-Calendar'
   tags: [ 'web app', 'productivity' ]
 
@@ -36,7 +36,7 @@
     Built over 5 days as part of a group project for CPSC 499.01 - Software Entrepreneurship
     at University of Calgary
   links:
-    project: 'https://nod.chimerical.ca'
+    primary: 'https://nod.chimerical.ca'
     gitHub: 'https://github.com/blake-mealey/nod-site'
   tags: [ 'web app', 'school project', 'group project' ]
 

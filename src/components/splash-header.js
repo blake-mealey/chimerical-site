@@ -16,6 +16,7 @@ const StyledHeader = styled.header`
   ul {
     display: flex;
     padding: 0px ${termsSpacing};
+    margin-left: 0;
     margin-top: -2rem;
 
     li {
