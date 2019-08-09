@@ -1,5 +1,6 @@
 - name: Azure Commit Copy
-  description: A Chrome extension for quickly copying and formatting commit and build info from Azure DevOps
+  description: >
+    A Chrome extension for quickly copying and formatting commit and build info from Azure DevOps
   links:
     project: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
     gitHub: 'https://github.com/blake-mealey/azure-commit-copy'
