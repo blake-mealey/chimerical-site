@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { textColor, accentColor } from "../../colors";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
-const AnchorButton = styled.a`
+const AnchorButton = styled(OutboundLink)`
   text-decoration: none;
   color: ${textColor};
   border-radius: 10px;
