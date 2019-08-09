@@ -54,7 +54,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
 const SplashHeader = () => {
   const data = useStaticQuery(graphql`
     query {
-      splashImage: file(relativePath: { eq: "splash-2.jpg" }) {
+      splashImage: file(relativePath: { eq: "splash.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 2000) {
             ...GatsbyImageSharpFluid
