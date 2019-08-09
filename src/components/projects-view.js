@@ -71,8 +71,16 @@ const ProjectsView = () => {
       githubUser: githubViewer {
         repositories {
           nodes {
-            updatedAt
             name
+            masterBranch {
+              target {
+                commits {
+                  nodes {
+                    lastUpdated
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -90,7 +98,7 @@ const ProjectsView = () => {
       const repo = data.githubUser.repositories.nodes.find(repo => this.links.gitHub.endsWith(repo.name));
       if (repo) {
         this.lastUpdated = {};
-        this.lastUpdated.dateTime = repo.updatedAt;
+        this.lastUpdated.dateTime = repo.masterBranch.target.commits.nodes[0].lastUpdated;
         this.lastUpdated.date = new Date(this.lastUpdated.dateTime);
         this.lastUpdated.formatted = this.lastUpdated.date.toLocaleDateString(`en-US`, {
           month: `long`,

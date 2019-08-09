@@ -53,7 +53,17 @@ module.exports = {
                 totalCount
                 nodes {
                   name
-                  updatedAt
+                  masterBranch: defaultBranchRef {
+                    target {
+                      ... on Commit {
+                        commits: history(first: 1) {
+                          nodes {
+                            lastUpdated: pushedDate
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
