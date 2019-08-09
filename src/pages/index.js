@@ -2,33 +2,21 @@ import React from "react"
 import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
-import { backgroundColor, textColor, accentColor } from "../colors";
+import { backgroundColor, textColor } from "../colors";
 import ProjectsView from "../components/projects-view";
 import SEO from "../components/seo";
 import "../components/layout.css";
+import Section from "../components/section";
 
 const Main = styled.main`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   padding-top: 2em;
 
   color: ${textColor};
   background-color: ${backgroundColor};
-
-  & > article {
-    width: 1200px;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    & > h2 {
-      margin-bottom: 1.5em;
-      text-decoration: underline;
-      text-decoration-color: ${accentColor}
-    }
-  }
 `;
 
 const IndexPage = () => (
@@ -38,23 +26,27 @@ const IndexPage = () => (
     <SplashHeader/>
 
     <Main>
-      <article>
-        <h2>
-          Projects by Blake Mealey
-        </h2>
-        <ProjectsView></ProjectsView>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-      </article>
+      <Section title="Projects by Blake Mealey">
+        <ProjectsView/>
+      </Section>
+
+      <Section title="Work Experience">
+        <p>Coming soon</p>
+      </Section>
+
+      <Section title="Education">
+        <p>Coming soon</p>
+      </Section>
+
+      <Section title="Skills">
+        <p>Coming soon</p>
+      </Section>
+
+      <Section title="Achievements">
+        <p>Coming soon</p>
+      </Section>
     </Main>
   </>
 );
 
-export default IndexPage
+export default IndexPage;

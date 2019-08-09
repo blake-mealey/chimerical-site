@@ -1,10 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import AnchorButton from "../components/styled/anchor-button";
+import AnchorButton from "./basics/anchor-button";
 import { accentColor } from "../colors";
 
 import styled from "styled-components";
-import MaterialIcon from "./material-icon";
+import MaterialIcon from "./basics/material-icon";
 
 const ProjectsList = styled.ul`
   display: flex;
