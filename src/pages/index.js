@@ -3,12 +3,11 @@ import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
 import { backgroundColor, textColor } from "../colors";
-import ProjectsView from "../components/projects/projects-view";
-import ExperienceView from "../components/experience-view";
-import EducationView from "../components/education-view";
+import { useExperienceItems, useEducationItems, useProjectsItems } from "../components/data-hooks";
 import SEO from "../components/seo";
 import "../components/layout.css";
 import Section from "../components/section";
+import { CardDetailsView } from "../components/card-details-view";
 
 const StyledMain = styled.main`
   display: flex;
@@ -29,15 +28,15 @@ const IndexPage = () => (
 
     <StyledMain>
       <Section title="Projects by Blake Mealey">
-        <ProjectsView/>
+        <CardDetailsView items={useProjectsItems()}/>
       </Section>
 
       <Section title="Experience">
-        <ExperienceView/>
+        <CardDetailsView items={useExperienceItems()}/>
       </Section>
 
       <Section title="Education">
-        <EducationView/>
+      <CardDetailsView items={useEducationItems()}/>
       </Section>
 
       <Section title="Skills">
