@@ -5,7 +5,7 @@ import Card from "./primitives/card";
 import DateModel from "../date-model";
 import marked from "marked";
 
-class ExperienceModel {
+class EducationModel {
     constructor({ id, name, description, startDate, endDate }) {
         this.id = id;
         this.name = name;
@@ -15,10 +15,10 @@ class ExperienceModel {
     }
 }
 
-const ExperiencesView = () => {
+const EducationView = () => {
   const data = useStaticQuery(graphql`
     query {
-      experiences: allExperiencesYaml {
+      educationItems: allEducationYaml {
         nodes {
           id
           name
@@ -30,20 +30,20 @@ const ExperiencesView = () => {
     }
   `);
 
-  const experiences = data.experiences.nodes.map(experience => new ExperienceModel(experience)).sort((a, b) => {
+  const educationItems = data.educationItems.nodes.map(item => new EducationModel(item)).sort((a, b) => {
     return a.endDate.date > b.endDate.date ? -1 : a.endDate.date < b.endDate.date ? 1 : 0;
   });
 
   return (
     <CardList>
-      {experiences.map(experience =>
-        <Card id={experience.id}
-              title={experience.name}
-              dates={[experience.startDate, experience.endDate]}>
-          <div dangerouslySetInnerHTML={{__html: marked(experience.description)}}/>
+      {educationItems.map(item =>
+        <Card id={item.id}
+              title={item.name}
+              dates={[item.startDate, item.endDate]}>
+          <div dangerouslySetInnerHTML={{__html: marked(item.description)}}/>
         </Card>)}
     </CardList>
   );
 }
 
-export default ExperiencesView;
+export default EducationView;

@@ -4,7 +4,8 @@ import SplashHeader from "../components/splash-header"
 import styled from "styled-components"
 import { backgroundColor, textColor } from "../colors";
 import ProjectsView from "../components/projects/projects-view";
-import ExperiencesView from "../components/experiences-view";
+import ExperienceView from "../components/experience-view";
+import EducationView from "../components/education-view";
 import SEO from "../components/seo";
 import "../components/layout.css";
 import Section from "../components/section";
@@ -32,11 +33,11 @@ const IndexPage = () => (
       </Section>
 
       <Section title="Experience">
-        <ExperiencesView/>
+        <ExperienceView/>
       </Section>
 
       <Section title="Education">
-        <p>Coming soon</p>
+        <EducationView/>
       </Section>
 
       <Section title="Skills">
