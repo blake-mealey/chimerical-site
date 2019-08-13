@@ -36,7 +36,7 @@ const IndexPage = () => (
       </Section>
 
       <Section title="Education">
-      <CardDetailsView items={useEducationItems()}/>
+        <CardDetailsView items={useEducationItems()}/>
       </Section>
 
       <Section title="Skills">
