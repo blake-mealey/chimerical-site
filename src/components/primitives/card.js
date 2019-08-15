@@ -4,7 +4,7 @@ import { accentColor } from "../../colors";
 import SpacedList from "./SpacedList";
 import AnchorButton from "./AnchorButton";
 import MaterialIcon from "./MaterialIcon";
-import Tag from "./Tag";
+import Chip from "./Chip";
 
 const StyledSection = styled.section`
   border-radius: 0 20px 0 20px;
@@ -66,7 +66,7 @@ const Card = ({ id, title, tags, dates, links, children }) => {
         <SpacedList>
           {dates && dates.map(date => <time title={date.title} dateTime={date.dateTime}> {date.formatted} </time>)
                         .reduce((acc, item, i) => i === 0 ? [item] : [...acc, <span>-</span>, item], [])}
-          {tags && tags.sort().map(tag => <Tag tag={tag}/>)}
+          {tags && tags.sort().map(tag => <Chip text={tag}/>)}
         </SpacedList>
 
         {children}

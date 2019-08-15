@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { accentColor } from "../../colors";
 
-const StyledTag = styled.span`
+const StyledChip = styled.span`
   border-radius: 9999em;
   padding: 0.3em;
   background-color: ${accentColor};
@@ -10,10 +10,10 @@ const StyledTag = styled.span`
   text-transform: lowercase;
 `;
 
-const Tag = ({ tag }) => (
-  <StyledTag key={tag}>
-    {tag}
-  </StyledTag>
+const Chip = ({ text }) => (
+  <StyledChip key={text}>
+    {text}
+  </StyledChip>
 );
 
-export default Tag;
+export default Chip;
