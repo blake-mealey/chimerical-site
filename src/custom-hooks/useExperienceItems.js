@@ -10,9 +10,7 @@ const getDatesFromStartAndEnd = (startDate, endDate) => {
 };
 
 const useExperienceItems = () => {
-  console.log('useExperienceItems')
-
-  const data = useStaticQuery(graphql`
+  const { experienceItems } = useStaticQuery(graphql`
     query {
       experienceItems: allExperienceYaml {
         nodes {
@@ -24,11 +22,9 @@ const useExperienceItems = () => {
         }
       }
     }
-  `)
+  `);
 
-  console.log('data:', data);
-
-  return data.experienceItems.nodes
+  return experienceItems.nodes
     .map(item =>
       new CardDetails({
         id: item.id,

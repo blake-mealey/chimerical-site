@@ -10,7 +10,7 @@ const getDatesFromStartAndEnd = (startDate, endDate) => {
 };
 
 const useEducationItems = () => {
-  const data = useStaticQuery(graphql`
+  const { educationItems } = useStaticQuery(graphql`
     query {
       educationItems: allEducationYaml {
         nodes {
@@ -24,7 +24,7 @@ const useEducationItems = () => {
     }
   `);
 
-  return data.educationItems.nodes
+  return educationItems.nodes
     .map(item => new CardDetails({
       id: item.id,
       title: item.name,
