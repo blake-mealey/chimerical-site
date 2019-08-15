@@ -3,7 +3,9 @@ import SplashHeader from "../components/splash-header"
 
 import styled from "styled-components"
 import { backgroundColor, textColor } from "../colors";
-import { useExperienceItems, useEducationItems, useProjectsItems } from "../components/data-hooks";
+import useProjectsItems from "../custom-hooks/useProjectsItems";
+import useExperienceItems from "../custom-hooks/useExperienceItems";
+import useEducationItems from "../custom-hooks/useEducationItems";
 import SEO from "../components/seo";
 import "../components/layout.css";
 import Section from "../components/section";
