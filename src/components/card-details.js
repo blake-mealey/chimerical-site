@@ -1,6 +1,3 @@
-import React from "react"
-import CardList from "./primitives/card-list"
-import Card from "./primitives/card"
 import marked from "marked"
 
 export class CardDetails {
@@ -19,17 +16,3 @@ export class CardDetails {
     return thisDate > otherDate ? -1 : thisDate < otherDate ? 1 : 0
   }
 }
-
-export const CardDetailsView = ({items}) => (
-  <CardList>
-    {items.map(item => (
-      <Card id={item.id}
-            title={item.title}
-            tags={item.tags}
-            dates={item.dates}
-            links={item.links}>
-        <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
-      </Card>
-    ))}
-  </CardList>
-);

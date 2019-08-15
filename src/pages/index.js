@@ -9,7 +9,7 @@ import useEducationItems from "../custom-hooks/useEducationItems";
 import SEO from "../components/seo";
 import "../components/layout.css";
 import Section from "../components/section";
-import { CardDetailsView } from "../components/card-details-view";
+import CardList from "../components/primitives/card-list";
 
 const StyledMain = styled.main`
   display: flex;
@@ -30,15 +30,15 @@ const IndexPage = () => (
 
     <StyledMain>
       <Section title="Projects by Blake Mealey">
-        <CardDetailsView items={useProjectsItems()}/>
+        <CardList items={useProjectsItems()}/>
       </Section>
 
       <Section title="Experience">
-        <CardDetailsView items={useExperienceItems()}/>
+        <CardList items={useExperienceItems()}/>
       </Section>
 
       <Section title="Education">
-        <CardDetailsView items={useEducationItems()}/>
+        <CardList items={useEducationItems()}/>
       </Section>
 
       <Section title="Skills">

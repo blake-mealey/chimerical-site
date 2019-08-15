@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
-import { CardDetails } from "../components/card-details-view";
+import { CardDetails } from "../components/card-details";
 import DateModel from "../date-model";
 
 const useProjectsItems = () => {
