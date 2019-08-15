@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
-import { CardDetails } from "../components/card-details";
-import DateModel from "../date-model";
+import { CardDetails } from "../components/CardDetails";
+import DateModel from "../DateModel";
 
 const getDatesFromStartAndEnd = (startDate, endDate) => {
   return [

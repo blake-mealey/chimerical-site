@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { accentColor } from "../../colors";
-import SpacedList from "./spaced-list";
-import AnchorButton from "./anchor-button";
-import MaterialIcon from "./material-icon";
-import Tag from "./tag";
+import SpacedList from "./SpacedList";
+import AnchorButton from "./AnchorButton";
+import MaterialIcon from "./MaterialIcon";
+import Tag from "./Tag";
 
 const StyledSection = styled.section`
   border-radius: 0 20px 0 20px;

@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
 import { backgroundColor, textColor, accentColor } from "../colors";
-import MaterialIcon from "./primitives/material-icon";
+import MaterialIcon from "./primitives/MaterialIcon";
 
 const termsSpacing = `20px`
 const StyledHeader = styled.header`

@@ -1,15 +1,15 @@
 import React from "react"
-import SplashHeader from "../components/splash-header"
+import SplashHeader from "../components/SplashHeader"
 
 import styled from "styled-components"
 import { backgroundColor, textColor } from "../colors";
 import useProjectsItems from "../custom-hooks/useProjectsItems";
 import useExperienceItems from "../custom-hooks/useExperienceItems";
 import useEducationItems from "../custom-hooks/useEducationItems";
-import SEO from "../components/seo";
+import SEO from "../components/Seo";
 import "../components/layout.css";
-import Section from "../components/section";
-import CardList from "../components/primitives/card-list";
+import Section from "../components/Section";
+import CardList from "../components/primitives/CardList";
 
 const StyledMain = styled.main`
   display: flex;
