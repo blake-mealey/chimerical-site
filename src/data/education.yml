@@ -1,11 +1,13 @@
-- name: BSc in Computer Science, University of Calgary
+- name: BSc in Computer Science
+  institution: University of Calgary
   startDate: 2014-09
   endDate: 2018-04
   description: |
     * 3.87 GPA within major field
     * Broad interests, including assembly programming, computer graphics, computer haptics, emergent systems, video games, and web apps.
 
-- name: High School Diploma, Sir Winston Churchill HS
+- name: High School Diploma
+  institution: Sir Winston Churchill HS
   startDate: 2011-09
   endDate: 2014-06
   description: |

@@ -1,0 +1,51 @@
+- name: Analysis and Design of Large-Scale Software
+  shortName: SENG 301
+  institution: University of Calgary
+  date: 2016-04
+  description: |
+    * Learned principles of software engineering, including Agile, planning, testing, refactoring
+    * Employed Agile planning and testing principles by building an Android app with a Node.js and
+      MongoDB server for finding meetup spots that are equidistant to you and your friends as a
+      group project
+
+- name: Database Management Systems
+  shortName: CPSC 471
+  institution: University of Calgary
+  date: 2017-04
+  description: |
+    * Learned to use relational databases, focusing on SQL
+    * Built a web app with Node.js and a PostgreSQL database for building UofC course schedules
+
+- name: Software Entrepreneurship
+  shortName: CPSC 499.01
+  institution: University of Calgary
+  date: 2018-12
+  description: |
+    * Learned fundamentals of tech startups
+    * Built a web app in Node.js with a MongoDB database for dictating and summarizing lecture
+      notes
+
+- name: Introduction to Computer Graphics
+  shortName: CPSC 453
+  institution: University of Calgary
+  date: 2016-12
+  description: |
+    * Learned fundamentals of computer graphics, from image manipulation to ray-tracing to modern
+      rendering techniques
+
+- name: Games Programming
+  shortName: CPSC 585
+  institution: University of Calgary
+  date: 2018-04
+  description: |
+    * Built a game without an engine from OpenGL and PhysX in C++
+
+- name: Computer Haptics
+  shortName: CPSC 599.86
+  institution: University of Calgary
+  date: 2018-04
+  description: |
+    * Worked with haptic devices to render haptic feedback to a user interacting in a virtual environment,
+      using C++
+    * Merged the Chai3d and Nvidea FleX libraries, enabling a user to "feel" water pushing against a virtual
+      paddle

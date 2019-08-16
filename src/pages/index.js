@@ -6,6 +6,7 @@ import { backgroundColor, textColor } from "../colors";
 import useProjectsItems from "../custom-hooks/useProjectsItems";
 import useExperienceItems from "../custom-hooks/useExperienceItems";
 import useEducationItems from "../custom-hooks/useEducationItems";
+import useCoursesItems from "../custom-hooks/useCoursesItems";
 import SEO from "../components/Seo";
 import "../components/layout.css";
 import Section from "../components/Section";
@@ -38,7 +39,11 @@ const IndexPage = () => (
       </Section>
 
       <Section title="Education">
+        <h3>Degrees</h3>
         <CardList items={useEducationItems()}/>
+
+        <h3>Courses</h3>
+        <CardList items={useCoursesItems()}/>
       </Section>
 
       <Section title="Skills">

@@ -16,6 +16,7 @@ const useEducationItems = () => {
         nodes {
           id
           name
+          institution
           description
           startDate
           endDate
@@ -29,7 +30,8 @@ const useEducationItems = () => {
       id: item.id,
       title: item.name,
       description: item.description,
-      dates: getDatesFromStartAndEnd(item.startDate, item.endDate)
+      dates: getDatesFromStartAndEnd(item.startDate, item.endDate),
+      tags: [item.institution]
     }))
     .sort((a, b) => a.compare(b));
 };

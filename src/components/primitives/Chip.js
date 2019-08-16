@@ -7,7 +7,6 @@ const StyledChip = styled.span`
   padding: 0.3em;
   background-color: ${accentColor};
   font-size: 0.8em;
-  text-transform: lowercase;
 `;
 
 const Chip = ({ text }) => (

@@ -4,7 +4,7 @@
   links:
     primary: 'https://chrome.google.com/webstore/detail/azure-commit-copy/cdpgnoklhcbaafbbemfglebpddbnedcp'
     gitHub: 'https://github.com/blake-mealey/azure-commit-copy'
-  tags: [ 'productivity', 'chrome extension' ]
+  tags: [ 'Productivity', 'Chrome extension' ]
 
 - name: Angular Modal Outlet
   description: |
@@ -12,7 +12,7 @@
   links:
     primary: 'https://blake-mealey.github.io/ng-modal-outlet'
     gitHub: 'https://github.com/blake-mealey/ng-modal-outlet'
-  tags: [ 'web app' ]
+  tags: [ 'Web app' ]
 
 - name: Chimerical Conversions
   description: |
@@ -20,7 +20,7 @@
   links:
     primary: 'https://conversions.chimerical.ca'
     gitHub: 'https://github.com/blake-mealey/conversions-app'
-  tags: [ 'web app' ]
+  tags: [ 'Web app' ]
 
 - name: University Schedule Converter
   description: |
@@ -28,7 +28,7 @@
   links:
     primary: 'https://schedule.chimerical.ca'
     gitHub: 'https://github.com/blake-mealey/UofC-Schedule-to-Google-Calendar'
-  tags: [ 'web app', 'productivity' ]
+  tags: [ 'Web app', 'Productivity' ]
 
 - name: Notes on Demand (NOD)
   description: |
@@ -38,7 +38,7 @@
   links:
     primary: 'https://nod.chimerical.ca'
     gitHub: 'https://github.com/blake-mealey/nod-site'
-  tags: [ 'web app', 'school project', 'group project' ]
+  tags: [ 'Web app', 'School project', 'Group project' ]
 
 - name: Car Wars
   description: |
@@ -47,7 +47,7 @@
     OpenGL with Nvidea PhysX
   links:
     gitHub: 'https://github.com/blake-mealey/car-wars'
-  tags: [ 'video game', 'c++', 'school project', 'group project' ]
+  tags: [ 'Video game', 'C++', 'School project', 'Group project' ]
 
 - name: YouTube to Spotify
   description: |
@@ -55,4 +55,4 @@
     add it to a playlist
   links:
     gitHub: 'https://github.com/blake-mealey/YouTube-To-Spotify'
-  tags: [ 'productivity', 'chrome extension' ]
+  tags: [ 'Productivity', 'Chrome extension' ]
