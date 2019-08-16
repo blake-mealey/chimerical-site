@@ -13,7 +13,6 @@ class CardDetails {
   compare(other) {
     const thisTime = this.dates[this.dates.length - 1].time;
     const otherTime = other.dates[other.dates.length - 1].time;
-    console.log(thisTime, otherTime);
     return thisTime > otherTime ? -1 : thisTime < otherTime ? 1 : 0;
   }
 }

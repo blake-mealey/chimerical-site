@@ -1,7 +1,6 @@
 class DateModel {
   constructor(dateTime, title, formatted, options = {}) {
     const date = new Date(dateTime);
-    console.log(formatted, date.getTime());
 
     this.dateTime = dateTime;
     this.title = title;
