@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
-import { CardDetails } from "../components/CardDetails";
+import CardDetails from "../components/CardDetails";
 import DateModel from "../DateModel";
 
 const getDatesFromStartAndEnd = (startDate, endDate) => {
@@ -32,8 +32,7 @@ const useEducationItems = () => {
       description: item.description,
       dates: getDatesFromStartAndEnd(item.startDate, item.endDate),
       tags: [item.institution]
-    }))
-    .sort((a, b) => a.compare(b));
+    }));
 };
 
 export default useEducationItems;

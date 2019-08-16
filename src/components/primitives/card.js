@@ -64,8 +64,8 @@ const Card = ({ id, title, tags, dates, links, children }) => {
           </header>}
 
         <SpacedList>
-          {dates && dates.map(date => <time title={date.title} dateTime={date.dateTime}> {date.formatted} </time>)
-                        .reduce((acc, item, i) => i === 0 ? [item] : [...acc, <span>-</span>, item], [])}
+          {dates && dates.map((date, index) => <time key={index} title={date.title} dateTime={date.dateTime}> {date.formatted} </time>)
+                        .reduce((acc, item, i) => i === 0 ? [item] : [...acc, <span key={`spacer${i}`}>-</span>, item], [])}
           {tags && tags.sort().map(tag => <Chip text={tag}/>)}
         </SpacedList>
 

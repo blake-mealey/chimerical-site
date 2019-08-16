@@ -8,8 +8,12 @@ const StyledList = styled.div`
   justify-content: center;
 `;
 
-export const CardList = ({ items }) => (
-  <StyledList>
+export const CardList = ({ items }) => {
+  console.log('before', items);
+  items = items.sort((a, b) => a.compare(b));
+  console.log('after', items);
+
+  return <StyledList>
     {items.map(cardDetails => (
       <Card id={cardDetails.id}
             title={cardDetails.title}
@@ -19,7 +23,7 @@ export const CardList = ({ items }) => (
         <div dangerouslySetInnerHTML={{ __html: cardDetails.description }}></div>
       </Card>
     ))}
-  </StyledList>
-);
+  </StyledList>;
+};
 
 export default CardList;

@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
-import { CardDetails } from "../components/CardDetails";
+import CardDetails from "../components/CardDetails";
 import DateModel from "../DateModel";
 
 const getDatesFromStartAndEnd = (startDate, endDate) => {
@@ -25,14 +25,12 @@ const useExperienceItems = () => {
   `);
 
   return experienceItems.nodes
-    .map(item =>
-      new CardDetails({
-        id: item.id,
-        title: item.name,
-        description: item.description,
-        dates: getDatesFromStartAndEnd(item.startDate, item.endDate)
-      }))
-    .sort((a, b) => a.compare(b));
+    .map(item => new CardDetails({
+      id: item.id,
+      title: item.name,
+      description: item.description,
+      dates: getDatesFromStartAndEnd(item.startDate, item.endDate)
+    }));
 };
 
 export default useExperienceItems;

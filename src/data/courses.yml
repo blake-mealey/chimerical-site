@@ -4,9 +4,9 @@
   date: 2016-04
   description: |
     * Learned principles of software engineering, including Agile, planning, testing, refactoring
-    * Employed Agile planning and testing principles by building an Android app with a Node.js and
-      MongoDB server for finding meetup spots that are equidistant to you and your friends as a
-      group project
+    * Employed Agile planning and testing principles by building an Android app with a Node.js 
+      and MongoDB server for finding meetup spots that are equidistant to you and your friends as
+      a group project
 
 - name: Database Management Systems
   shortName: CPSC 471
@@ -19,7 +19,7 @@
 - name: Software Entrepreneurship
   shortName: CPSC 499.01
   institution: University of Calgary
-  date: 2018-12
+  date: 2017-12
   description: |
     * Learned fundamentals of tech startups
     * Built a web app in Node.js with a MongoDB database for dictating and summarizing lecture
@@ -45,7 +45,7 @@
   institution: University of Calgary
   date: 2018-04
   description: |
-    * Worked with haptic devices to render haptic feedback to a user interacting in a virtual environment,
-      using C++
-    * Merged the Chai3d and Nvidea FleX libraries, enabling a user to "feel" water pushing against a virtual
-      paddle
+    * Worked with haptic devices to render haptic feedback to a user interacting in a virtual
+      environment, using C++
+    * Merged the Chai3d and Nvidea FleX libraries, enabling a user to "feel" water pushing
+      against a virtual paddle

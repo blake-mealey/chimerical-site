@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
-import { CardDetails } from "../components/CardDetails";
+import CardDetails from "../components/CardDetails";
 import DateModel from "../DateModel";
 
 const useProjectsItems = () => {
@@ -55,8 +55,7 @@ const useProjectsItems = () => {
       description: item.description,
       links: item.links,
       dates: [getLastUpdatedDateForProject(item)]
-    }))
-    .sort((a, b) => a.compare(b));
+    }));
 };
 
 export default useProjectsItems;
