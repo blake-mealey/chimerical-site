@@ -12,7 +12,7 @@ const StyledSection = styled.section`
   list-style-type: none;
   padding: 20px;
   margin: 20px;
-  width: 500px;
+  flex: 0 1 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { accentColor } from "../colors";
 
-const maxWidth = `1100px`;
 const StyledArticle = styled.article`
-    width: ${maxWidth};
-    max-width: ${maxWidth};
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +11,8 @@ const StyledArticle = styled.article`
     & > h2 {
         margin-bottom: 1.5em;
         text-decoration: underline;
-        text-decoration-color: ${accentColor}
+        text-decoration-color: ${accentColor};
+        text-align: center;
     }
 `;
 
