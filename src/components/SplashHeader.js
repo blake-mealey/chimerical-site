@@ -13,6 +13,16 @@ const StyledHeader = styled.header`
   align-items: center;
   color: ${textColor};
 
+  transition: 0.2s;
+
+  @media (max-width: 900px) {
+    font-size: 75%
+  }
+
+  @media (max-width: 700px) {
+    font-size: 30%
+  }
+
   ul {
     display: flex;
     padding: 0px ${termsSpacing};
@@ -26,7 +36,7 @@ const StyledHeader = styled.header`
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: 1.25em;
   }
 `;
 
