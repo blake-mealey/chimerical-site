@@ -58,4 +58,4 @@
     * Merged the Chai3d and Nvidea FleX libraries, enabling a user to "feel" water pushing
       against a virtual paddle
   links:
-    gitHub: https://github.com/blake-mealey/Chai3d-FleX
+    gitHub: https://github.com/cloudcrypt/FleX-Chai3d
