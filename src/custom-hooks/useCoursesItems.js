@@ -18,6 +18,10 @@ const useCoursesItems = () => {
           institution
           date
           description
+          links {
+            primary
+            gitHub
+          }
         }
       }
     }
@@ -29,7 +33,8 @@ const useCoursesItems = () => {
       title: item.name,
       description: item.description,
       dates: [getSemesterDate(item.date)],
-      tags: [item.institution, item.shortName]
+      tags: [item.institution, item.shortName],
+      links: item.links
     }));
 };
 

@@ -7,6 +7,8 @@
     * Employed Agile planning and testing principles by building an Android app with a Node.js 
       and MongoDB server for finding meetup spots that are equidistant to you and your friends as
       a group project
+  links:
+    gitHub: https://github.com/blake-mealey/Meet-App-Server
 
 - name: Database Management Systems
   shortName: CPSC 471
@@ -15,6 +17,8 @@
   description: |
     * Learned to use relational databases, focusing on SQL
     * Built a web app with Node.js and a PostgreSQL database for building UofC course schedules
+  links:
+    gitHub: https://github.com/blake-mealey/dauwtrappen
 
 - name: Software Entrepreneurship
   shortName: CPSC 499.01
@@ -23,7 +27,9 @@
   description: |
     * Learned fundamentals of tech startups
     * Built a web app in Node.js with a MongoDB database for dictating and summarizing lecture
-      notes
+  links:
+    primary: https://chimerical.ca/nod
+    gitHub: https://github.com/blake-mealey/nod-site
 
 - name: Introduction to Computer Graphics
   shortName: CPSC 453
@@ -39,6 +45,8 @@
   date: 2018-04
   description: |
     * Built a game without an engine from OpenGL and PhysX in C++
+  links:
+    gitHub: https://github.com/blake-mealey/car-wars
 
 - name: Computer Haptics
   shortName: CPSC 599.86
@@ -49,3 +57,5 @@
       environment, using C++
     * Merged the Chai3d and Nvidea FleX libraries, enabling a user to "feel" water pushing
       against a virtual paddle
+  links:
+    gitHub: https://github.com/blake-mealey/Chai3d-FleX
