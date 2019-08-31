@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { accentColor } from "../colors";
 
 const StyledArticle = styled.article`
+    width: 100%;
     max-width: 1100px;
     display: flex;
     flex-direction: column;

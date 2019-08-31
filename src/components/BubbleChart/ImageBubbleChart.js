@@ -1,14 +1,16 @@
 import * as d3 from "d3";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+
+const StyledContainer = styled.div`
+    width: 100%;
+`;
 
 const StyledSvg = styled.svg`
     text-align: center;
 `;
 
-const size = [800, 700];
-
-function useRenderGraph(items) {
+function useRenderGraph(items, size) {
     // Create the pack layout
     const pack = d3.pack()
         .size(size)
@@ -66,23 +68,56 @@ function useRenderBubbles(svg, nodes) {
 }
 
 const ImageBubbleChart = ({ items }) => {
+    // Get references to the container and SVG
+    const containerRef = useRef(null);
     const svgRef = useRef(null);
 
-    // TODO: How often should we run this?
+    // Get the current size to render the chart at
+    const [size, setSize] = useState(null);
+
     useEffect(() => {
+        // Get the current container and SVG
+        const container = containerRef.current;
         const svg = svgRef.current;
+
+        // If we don't have a size yet (initial render), set the size to the container's width squared
+        if (size === null) {
+            setSize([container.clientWidth, container.clientWidth]);
+            return;
+        }
 
         // Clear the SVG element
         while (svg.firstChild) {
             svg.removeChild(svg.firstChild);
         }
 
+        // Update the SVG's width and height to the size from state
+        svg.setAttribute(`width`, size[0]);
+        svg.setAttribute(`height`, size[1]);
+
         // Render the graph
-        const nodes = useRenderGraph(items);
+        const nodes = useRenderGraph(items, size);
         useRenderBubbles(svg, nodes);
+
+        // Listen to the container resizing, and update the size state
+        const resizeObserver = new ResizeObserver(() => {
+            if (size[0] !== container.clientWidth) {
+                setSize([container.clientWidth, container.clientWidth]);
+            }
+        });
+        resizeObserver.observe(container);
+
+        // Stop listening to the container resizing when this effect is cleaned up
+        return () => {
+            resizeObserver.unobserve(container);
+        };
     });
 
-    return (<StyledSvg ref={svgRef} width={size[0]} height={size[1]}></StyledSvg>);
+    return (
+        <StyledContainer ref={containerRef}>
+            <StyledSvg ref={svgRef}></StyledSvg>
+        </StyledContainer>
+    );
 };
 
 export default ImageBubbleChart;
