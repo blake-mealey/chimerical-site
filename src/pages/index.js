@@ -11,6 +11,8 @@ import SEO from "../components/Seo";
 import "../components/layout.css";
 import Section from "../components/Section";
 import CardList from "../components/primitives/CardList";
+import ImageBubbleChart from "../components/BubbleChart/ImageBubbleChart";
+import useSoftwareItems from "../custom-hooks/useSoftwareItems";
 
 const StyledMain = styled.main`
   display: flex;
@@ -47,7 +49,8 @@ const IndexPage = () => (
       </Section>
 
       <Section title="Skills">
-        <p>Coming soon</p>
+        <h3>Software</h3>
+        <ImageBubbleChart items={useSoftwareItems()}/>
       </Section>
 
       <Section title="Achievements">

@@ -1,0 +1,49 @@
+- name: Sublime Text
+  experience: 10
+  color: '#FF9D0D'
+
+- name: IntelliJ IDEA
+  experience: 10
+  color: '#0D0D0D'
+
+- name: Paint.NET
+  experience: 10
+  color: '#D4202B'
+
+- name: Slack
+  experience: 10
+  color: '#E2216B'
+
+- name: Jira
+  experience: 5
+  color: '#2B5987'
+
+- name: Eclipse
+  experience: 5
+  color: '#372D5E'
+  iconFileName: Eclipse-IDE.png
+
+- name: Microsoft Office Word
+  experience: 5
+  color: '#355F9E'
+
+- name: Microsoft Office PowerPoint
+  experience: 5
+  color: '#D44F30'
+
+- name: Microsoft Office Excel
+  experience: 5
+  color: '#2B794E'
+
+- name: Git
+  experience: 5
+  color: '#F45834'
+
+- name: GitHub
+  experience: 5
+  color: '#193140'
+
+- name: Digital Ocean
+  experience: 2.5
+  color: '#0D86FF'
+  iconFileName: Digital-Ocean.png
