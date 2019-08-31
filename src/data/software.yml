@@ -1,22 +1,22 @@
 - name: Sublime Text
-  experience: 10
+  experience: 40
   color: '#FF9D0D'
+  iconFileName: sublime-text.png
 
 - name: IntelliJ IDEA
   experience: 10
-  color: '#0D0D0D'
-
-- name: Paint.NET
-  experience: 10
-  color: '#D4202B'
+  color: '#FE315D'
+  iconFileName: intellij-idea.png
 
 - name: Slack
-  experience: 10
+  experience: 40
   color: '#E2216B'
+  iconFileName: slack.png
 
-- name: Jira
-  experience: 5
+- name: Jira Software
+  experience: 10
   color: '#2B5987'
+  iconFileName: jira-software.png
 
 - name: Eclipse
   experience: 5
@@ -24,26 +24,98 @@
   iconFileName: Eclipse-IDE.png
 
 - name: Microsoft Office Word
-  experience: 5
+  experience: 40
   color: '#355F9E'
+  iconFileName: microsoft-office-word.png
 
 - name: Microsoft Office PowerPoint
-  experience: 5
+  experience: 40
   color: '#D44F30'
+  iconFileName: microsoft-office-powerpoint.png
 
 - name: Microsoft Office Excel
-  experience: 5
+  experience: 40
   color: '#2B794E'
+  iconFileName: microsoft-office-excel.png
 
 - name: Git
-  experience: 5
+  experience: 120
   color: '#F45834'
+  iconFileName: git.png
 
 - name: GitHub
-  experience: 5
-  color: '#193140'
+  experience: 40
+  color: '#161614'
+  iconFileName: github.png
 
 - name: Digital Ocean
-  experience: 2.5
+  experience: 40
   color: '#0D86FF'
   iconFileName: Digital-Ocean.png
+
+- name: Azure Pipelines
+  experience: 40
+  color: '#2563E2'
+  iconFileName: azure-pipelines.png
+
+- name: Azure
+  experience: 10
+  color: '#2274B8'
+
+- name: JetBrains WebStorm
+  experience: 120
+  color: '#00CDD7'
+  iconFileName: jetbrains-webstorm.png
+
+- name: JetBrains ReSharper
+  experience: 120
+  color: '#C41E57'
+  iconFileName: jetbrains-resharper.png
+
+- name: Visual Studio Code
+  experience: 40
+  color: '#3AAAF2'
+  iconFileName: visual-studio-code.png
+
+- name: Visual Studio
+  experience: 40
+  color: '#BB88F3'
+  iconFileName: visual-studio.png
+
+- name: Postman
+  experience: 10
+  color: '#F26B37'
+
+- name: Microsoft SQL Server Management Studio
+  experience: 10
+  color: '#FFB900'
+
+- name: Azure Data Studio
+  experience: 5
+  color: '#449AD4'
+  iconFileName: azure-data-studio.png
+
+- name: Azure Repos
+  experience: 10
+  color: '#D94007'
+  iconFileName: azure-repos.png
+
+- name: LaunchDarkly
+  experience: 10
+  color: '#065278'
+  iconFileName: launchdarkly.png
+
+- name: Microsoft Teams
+  experience: 10
+  color: '#4A52BD'
+  iconFileName: microsoft-teams.png
+
+- name: Trello
+  experience: 40
+  color: '#007CC4'
+  iconFileName: trello.png
+
+- name: PowerShell
+  experience: 10
+  color: '#0872C4'
+  iconFileName: powershell.png
