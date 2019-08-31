@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
     width: 100%;
+    display: flex;
+    justify-content: center;
 `;
 
 const StyledSvg = styled.svg`
@@ -60,11 +62,11 @@ function useRenderBubbles(svg, nodes) {
         .attr(`width`, d => d.r * 1.5)
         .attr(`height`, d => d.r * 1.5)
         .attr(`transform`, d => `translate(${-d.r*1.5 / 2},${-d.r*1.5 / 2})`);
-    
-    node.append(`clipPath`)
-        .attr(`id`, d => `clip-${d.id}`)
-        .append(`use`)
-            .attr(`xlink:href`, d => `#${d.id}`);
+}
+
+function getSize(container) {
+    const dimension = Math.min(container.clientWidth, window.innerHeight);
+    return [dimension, dimension];
 }
 
 const ImageBubbleChart = ({ items }) => {
@@ -82,7 +84,7 @@ const ImageBubbleChart = ({ items }) => {
 
         // If we don't have a size yet (initial render), set the size to the container's width squared
         if (size === null) {
-            setSize([container.clientWidth, container.clientWidth]);
+            setSize(getSize(container));
             return;
         }
 
@@ -102,7 +104,7 @@ const ImageBubbleChart = ({ items }) => {
         // Listen to the container resizing, and update the size state
         const resizeObserver = new ResizeObserver(() => {
             if (size[0] !== container.clientWidth) {
-                setSize([container.clientWidth, container.clientWidth]);
+                setSize(getSize(container));
             }
         });
         resizeObserver.observe(container);
