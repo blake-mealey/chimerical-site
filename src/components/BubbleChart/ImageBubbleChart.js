@@ -16,7 +16,7 @@ function useRenderGraph(items, size) {
     // Create the pack layout
     const pack = d3.pack()
         .size(size)
-        .padding(10);
+        .padding(20);
 
     // Process the data into a hierarchical structure
     const root = d3.hierarchy({ children: items })
@@ -39,12 +39,18 @@ function useRenderBubbles(svg, nodes) {
     const chart = d3.select(svg).append(`g`)
         .attr(`class`, `bubble-chart`);
     
+    const getTransform = (d, s) => {
+        return `translate(${d.x},${d.y}), scale(${s})`
+    };
     const node = chart.selectAll(`.node`)
         .data(nodes)
         .enter().append(`g`)
+            .style(`pointer-events`, `all`)
+            .style(`transition`, `0.2s`)
             .attr(`class`, `node`)
-            .attr(`transform`, d => `translate(${d.x},${d.y})`)
-            .on(`click`, d => console.log(`clicked ${d}`));
+            .attr(`transform`, d => getTransform(d, 1))
+            .on('mouseover', (_, index, groups) => d3.select(groups[index]).attr(`transform`, d => getTransform(d, 1.10)))
+            .on('mouseout', (_, index, groups) => d3.select(groups[index]).attr(`transform`, d => getTransform(d, 1)));
     
     node.append(`title`)
         .text(d => d.label);
@@ -52,13 +58,17 @@ function useRenderBubbles(svg, nodes) {
     node.append(`circle`)
         .attr(`id`, d => d.id)
         .attr(`r`, d => d.r)
-        .attr(`fill`, `none`)
+        .attr(`fill-opacity`, 0)
+        .attr(`fill`, d => d.data.color)
         .attr(`stroke-width`, 2)
         .attr(`stroke`, d => d.data.color)
-        .style(`z-index`, 1);
+        .style(`z-index`, 1)
+        .on('mouseover', (_, index, groups) => d3.select(groups[index]).attr(`fill-opacity`, 0.1))
+        .on('mouseout', (_, index, groups) => d3.select(groups[index]).attr(`fill-opacity`, 0));
 
     const imageScale = 1.25;
     node.append(`image`)
+        .style(`pointer-events`, `none`)
         .attr(`xlink:href`, d => d.data.imageUrl)
         .attr(`width`, d => d.r * imageScale)
         .attr(`height`, d => d.r * imageScale)
