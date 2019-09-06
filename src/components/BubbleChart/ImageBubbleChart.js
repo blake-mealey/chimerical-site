@@ -104,8 +104,9 @@ const ImageBubbleChart = ({ items }) => {
 
         // Listen to the container resizing, and update the size state
         const resizeObserver = new ResizeObserver(() => {
-            if (size[0] !== container.clientWidth) {
-                setSize(getSize(container));
+            const newSize = getSize(container);
+            if (size[0] !== newSize[0] || size[1] !== newSize[1]) {
+                setSize(newSize);
             }
         });
         resizeObserver.observe(container);
