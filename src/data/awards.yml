@@ -1,0 +1,17 @@
+- name: UofC Undergraduate Merit Award
+  dates: ['2016-09', '2017-04']
+
+- name: UofC Faculty of Science Dean's List
+  dates: ['2016-09', '2017-04']
+  links:
+    primary: https://science.ucalgary.ca/about/excellence-and-awards/deans-list
+
+- name: UofC Faculty of Science Dean's List
+  dates: ['2015-09', '2016-04']
+  links:
+    primary: https://science.ucalgary.ca/about/excellence-and-awards/deans-list
+
+- name: UofC Faculty of Science Dean's List
+  dates: ['2014-09', '2015-04']
+  links:
+    primary: https://science.ucalgary.ca/about/excellence-and-awards/deans-list

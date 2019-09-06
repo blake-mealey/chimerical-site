@@ -7,7 +7,7 @@ class CardDetails {
     this.tags = tags;
     this.dates = dates;
     this.links = links;
-    this.description = marked(description);
+    this.description = description ? marked(description) : null;
   }
 
   compare(other) {

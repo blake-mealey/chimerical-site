@@ -15,6 +15,7 @@ import ImageBubbleChart from "../components/BubbleChart/ImageBubbleChart";
 import useSoftwareItems from "../custom-hooks/useSoftwareItems";
 import useTechItems from "../custom-hooks/useTechItems";
 import useCompetitionsItems from "../custom-hooks/useCompetitionsItems";
+import useAwardsItems from "../custom-hooks/useAwardsItems";
 
 const StyledMain = styled.main`
   display: flex;
@@ -61,6 +62,9 @@ const IndexPage = () => (
       <Section title="Achievements">
         <h3>Competitions</h3>
         <CardList items={useCompetitionsItems()}/>
+
+        <h3>Awards</h3>
+        <CardList items={useAwardsItems()}/>
       </Section>
     </StyledMain>
   </>
