@@ -8,7 +8,7 @@ import Chip from "./Chip";
 
 const StyledSection = styled.section`
   border-radius: 0 20px 0 20px;
-  border: 4px solid;
+  border: 2px solid;
   list-style-type: none;
   padding: 20px;
   margin: 20px;
