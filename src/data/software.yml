@@ -45,7 +45,7 @@
 
 - name: GitHub
   experience: 40
-  color: '#161614'
+  color: '#FFFFFF'
   iconFileName: github.png
 
 - name: Digital Ocean
@@ -61,6 +61,7 @@
 - name: Azure
   experience: 10
   color: '#2274B8'
+  iconFileName: azure.png
 
 - name: JetBrains WebStorm
   experience: 120
@@ -85,10 +86,12 @@
 - name: Postman
   experience: 10
   color: '#F26B37'
+  iconFileName: postman.png
 
 - name: Microsoft SQL Server Management Studio
   experience: 10
   color: '#FFB900'
+  iconFileName: ssms.png
 
 - name: Azure Data Studio
   experience: 5

@@ -57,11 +57,12 @@ function useRenderBubbles(svg, nodes) {
         .attr(`stroke`, d => d.data.color)
         .style(`z-index`, 1);
 
+    const imageScale = 1.25;
     node.append(`image`)
         .attr(`xlink:href`, d => d.data.imageUrl)
-        .attr(`width`, d => d.r * 1.5)
-        .attr(`height`, d => d.r * 1.5)
-        .attr(`transform`, d => `translate(${-d.r*1.5 / 2},${-d.r*1.5 / 2})`);
+        .attr(`width`, d => d.r * imageScale)
+        .attr(`height`, d => d.r * imageScale)
+        .attr(`transform`, d => `translate(${-d.r*imageScale / 2},${-d.r*imageScale / 2})`);
 }
 
 function getSize(container) {
