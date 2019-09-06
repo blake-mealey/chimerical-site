@@ -1,0 +1,54 @@
+- name: Java
+  experience: 20
+  color: '#5382A1'
+  iconFileName: java.png
+
+- name: C#
+  experience: 20
+  color: '#1E9E25'
+  iconFileName: c-sharp.png
+
+- name: .NET
+  experience: 10
+  color: '#106DB3'
+  iconFileName: dot-net.png
+
+- name: C++
+  experience: 10
+  color: '#649AD2'
+  iconFileName: c-plus-plus.png
+
+- name: JavaScript
+  experience: 60
+  color: '#F0D91D'
+  iconFileName: javascript.png
+
+- name: Angular.js
+  experience: 40
+  color: '#DD1B16'
+  iconFileName: angular-js.png
+
+- name: Angular
+  experience: 10
+  color: '#DD0031'
+  iconFileName: angular.png
+
+- name: React
+  experience: 10
+  color: '#5ED4F4'
+  iconFileName: react.png
+
+- name: jQuery
+  experience: 20
+  color: '#0965A7'
+  iconFileName: jquery.png
+
+- name: MongoDB
+  experience: 10
+  color: '#4EAE3D'
+  iconFileName: mongo-db.png
+
+- name: SQL
+  experience: 30
+  color: '#006FC0'
+  iconFileName: sql.png

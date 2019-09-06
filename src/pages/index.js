@@ -13,6 +13,7 @@ import Section from "../components/Section";
 import CardList from "../components/primitives/CardList";
 import ImageBubbleChart from "../components/BubbleChart/ImageBubbleChart";
 import useSoftwareItems from "../custom-hooks/useSoftwareItems";
+import useTechItems from "../custom-hooks/useTechItems";
 
 const StyledMain = styled.main`
   display: flex;
@@ -49,6 +50,9 @@ const IndexPage = () => (
       </Section>
 
       <Section title="Skills">
+        <h3>Tech</h3>
+        <ImageBubbleChart items={useTechItems()}/>
+
         <h3>Software</h3>
         <ImageBubbleChart items={useSoftwareItems()}/>
       </Section>
