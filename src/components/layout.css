@@ -562,9 +562,11 @@ abbr[title] {
   cursor: help;
   text-decoration: none;
 }
+tr:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
 td,
 th {
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
