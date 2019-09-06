@@ -14,6 +14,7 @@ import CardList from "../components/primitives/CardList";
 import ImageBubbleChart from "../components/BubbleChart/ImageBubbleChart";
 import useSoftwareItems from "../custom-hooks/useSoftwareItems";
 import useTechItems from "../custom-hooks/useTechItems";
+import useCompetitionsItems from "../custom-hooks/useCompetitionsItems";
 
 const StyledMain = styled.main`
   display: flex;
@@ -58,7 +59,8 @@ const IndexPage = () => (
       </Section>
 
       <Section title="Achievements">
-        <p>Coming soon</p>
+        <h3>Competitions</h3>
+        <CardList items={useCompetitionsItems()}/>
       </Section>
     </StyledMain>
   </>
